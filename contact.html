@@ -9,36 +9,18 @@
 <body>
     <header>
         <h1>Khue Nguyen</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="school.html">School</a>
-                    <ul>
-                        <li><a href="#">Master of Information Technology</a>
-                            <ul>
-                                <li><a href="projects/understanding-data-structure.html">Understanding Data Structure</a></li>
-                                <li><a href="projects/database-modelling.html">Database Modelling</a></li>
-                                <li><a href="projects/sql.html">SQL</a></li>
-                                <li><a href="projects/geographic-routing.html">Geographic Routing</a></li>
-                                <li><a href="projects/ticket-management.html">Ticket Management</a></li>
-                                <li><a href="projects/logic.html">Logic</a></li>
-                                <li><a href="projects/grammars-automata.html">Grammars, Automata</a></li>
-                                <li><a href="projects/modelling-supreme-court.html">Modelling Supreme Court</a></li>
-                                <li><a href="projects/hotel-booking.html">Hotel Booking</a></li>
-                                <li><a href="projects/publisher-subscriber.html">Publisher-Subscriber</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Bachelor of Commerce</a></li>
-                        <li><a href="#">VCE</a></li>
-                    </ul>
-                </li>
-                <li><a href="project.html">Project</a></li>
-                <li><a href="tutoring.html">Tutoring</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="nav-placeholder"></div> <!-- Placeholder for the navigation -->
     </header>
+    <script>
+        function loadNavigation() {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                });
+        }
+        loadNavigation();
+    </script>
     <main>
         
         <h2>Contact Me</h2>
