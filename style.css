@@ -1,15 +1,18 @@
 /* Modern Personal Website Styles */
 /* Base styles and variables */
 :root {
-  --primary-color: #4a6fa5;
-  --secondary-color: #f8f9fa;
-  --accent-color: #6c63ff;
+  --primary-color: #ff6f20; /* Main orange color */
+  --secondary-color: #fff5e6; /* Light orange background */
+  --accent-color: #ff9f43; /* Accent orange color */
   --text-color: #333;
   --light-text: #6c757d;
   --dark-bg: #2d3748;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -18,7 +21,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: #fff;
@@ -59,11 +62,12 @@ a:hover {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, var(--primary-color), var(--dark-bg));
+  background-color: var(--primary-color);
   color: white;
   padding: 2rem 0;
   box-shadow: var(--shadow);
   position: relative;
+  text-align: center;
 }
 
 header h1 {
@@ -71,6 +75,7 @@ header h1 {
   font-size: 2.8rem;
   letter-spacing: -0.5px;
   animation: fadeIn 1s ease-in-out;
+  display: inline-block;
 }
 
 /* Navigation */
@@ -88,22 +93,50 @@ nav ul {
 
 nav ul li {
   margin: 0;
+  position: relative;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--primary-color);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 200px;
+}
+
+nav ul li ul li a {
+  padding: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
   transition: var(--transition);
+  padding: 10px;
 }
 
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  text-decoration: none;
-  transform: translateY(-2px);
+  background-color: #ff9f43; /* Lighter shade of orange for hover */
+  color: white; /* Ensure text color remains white on hover */
 }
 
 /* Main content */
