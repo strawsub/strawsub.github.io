@@ -3,41 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Data Structure & Algorithm</title>
+    <title>Modelling Supreme Court</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
         <h1>Khue Nguyen</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../school.html">School</a>
-                    <ul>
-                        <li><a href="#">Master of Information Technology</a>
-                            <ul>
-                                <li><a href="understanding-data-structure.html">Understanding Data Structure</a></li>
-                                <li><a href="database-modelling.html">Database Modelling</a></li>
-                                <li><a href="sql.html">SQL</a></li>
-                                <li><a href="geographic-routing.html">Geographic Routing</a></li>
-                                <li><a href="ticket-management.html">Ticket Management</a></li>
-                                <li><a href="logic.html">Logic</a></li>
-                                <li><a href="grammars-automata.html">Grammars, Automata</a></li>
-                                <li><a href="modelling-supreme-court.html">Modelling Supreme Court</a></li>
-                                <li><a href="hotel-booking.html">Hotel Booking</a></li>
-                                <li><a href="publisher-subscriber.html">Publisher-Subscriber</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Bachelor of Commerce</a></li>
-                        <li><a href="#">VCE</a></li>
-                    </ul>
-                </li>
-                <li><a href="../project.html">Project</a></li>
-                <li><a href="../books.html">Books</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div id="nav-placeholder"></div> <!-- Placeholder for the navigation -->
     </header>
+    <script>
+        function loadNavigation() {
+            fetch('../../navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                });
+        }
+        loadNavigation();
+    </script>
     <main>
         <h1>Modelling Supreme Court Decisions</h1>
         <p>Details about the project go here.</p>
