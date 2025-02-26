@@ -1,9 +1,20 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <title>Master of Information Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Khue Nguyen</h1>
         <div id="nav-placeholder"></div> <!-- Placeholder for the navigation -->
     </header>
     <script>
         function loadNavigation() {
-            fetch('../navigation.html')
+            fetch('navigation.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('nav-placeholder').innerHTML = data;
@@ -11,3 +22,22 @@
         }
         loadNavigation();
     </script>
+    <main>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Thuy Khue Nguyen</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function loadNavigation() {
+            fetch('navigation.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('nav-placeholder').innerHTML = data;
+                });
+        }
+        loadNavigation();
+    </script>
+</body>
+</html>
