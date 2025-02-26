@@ -22,21 +22,12 @@
         loadNavigation();
     </script>
     <main>
-        
+        <h1>Books</h1>
+        <p>Check out my <a href="https://www.goodreads.com/user/show/56860377-khue-nguyen" target="_blank">Goodreads Profile</a></p>
     </main>
     <footer>
         <p>&copy; 2025 Thuy Khue Nguyen</p>
     </footer>
     <script src="script.js"></script>
-    <script>
-        function loadNavigation() {
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-placeholder').innerHTML = data;
-                });
-        }
-        loadNavigation();
-    </script>
 </body>
 </html>
