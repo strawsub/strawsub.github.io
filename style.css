@@ -1,18 +1,30 @@
-/* Modern Personal Website Styles */
 /* Base styles and variables */
 :root {
-  --primary-color: #ff6f20; /* Main orange color */
-  --secondary-color: #fff5e6; /* Light orange background */
-  --accent-color: #ff9f43; /* Accent orange color */
-  --text-color: #333;
+  /* Professional Color Palette */
+  --primary-color: #FF6B35; /* Main orange color */
+  --secondary-color: #F7C59F; /* Light orange */
+  --accent-color: #004E89; /* Deep blue accent */
+  --neutral-dark: #2B2D42; /* Dark gray for text */
+  --neutral-light: #F8F9FA; /* Light gray for backgrounds */
+  
+  --text-color: var(--neutral-dark);
   --light-text: #6c757d;
-  --dark-bg: #2d3748;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --button-bg: var(--primary-color);
+  --button-text: white;
+  --header-bg: white;
+  --footer-bg: var(--neutral-dark);
+  --footer-text: white;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
+  
+  /* Dark Mode Variables */
+  --dark-bg: #1A1A1D;
+  --dark-text-color: #F8F9FA;
+  --dark-secondary-color: #2B2D42;
 }
 
-/* Importing Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Importing Google Fonts - Professional combination */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); /* Regular Inter font */
 
 * {
   margin: 0;
@@ -21,49 +33,67 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Inter", sans-serif; /* Fallback to Inter */
   line-height: 1.6;
   color: var(--text-color);
-  background-color: #fff;
+  background-color: var(--neutral-light);
   overflow-x: hidden;
+  font-weight: 400; /* Normal weight */
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text-color);
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-  color: var(--primary-color);
-}
-
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
+/* Modern Button Styles */
+button, .btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400; /* Normal weight */
+  font-size: 0.95rem;
+  cursor: pointer;
   transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
 }
 
-a:hover {
+button:hover, .btn:hover {
+  background-color: #E85A2A; /* Slightly darker orange */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding: 0;
+  background-color: transparent;
   color: var(--primary-color);
-  text-decoration: underline;
+  box-shadow: none;
+  margin-left: 15px;
 }
 
-/* Header */
+#theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: none;
+}
+
+/* Professional Header Styles */
 header {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--header-bg);
+  color: var(--text-color);
   padding: 2rem 0;
   box-shadow: var(--shadow);
   position: relative;
@@ -71,103 +101,147 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  font-family: "Inter", sans-serif;
   font-size: 2.8rem;
-  letter-spacing: -0.5px;
-  animation: fadeIn 1s ease-in-out;
-  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 /* Navigation */
 nav {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
 }
 
 nav ul li {
-  margin: 0;
   position: relative;
 }
 
-nav ul li ul {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: var(--primary-color);
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  z-index: 1000;
-}
-
-nav ul li:hover > ul {
-  display: block;
-}
-
-nav ul li ul li {
-  width: 200px;
-}
-
-nav ul li ul li a {
-  padding: 10px;
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-nav ul li ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 nav ul li a {
-  color: white;
+  color: var(--text-color);
+  font-weight: 400; /* Normal weight */
   text-decoration: none;
+  padding: 0.5rem 0;
   transition: var(--transition);
-  padding: 10px;
+  font-family: "Inter", sans-serif;
+  position: relative;
 }
 
 nav ul li a:hover {
-  background-color: #ff9f43; /* Lighter shade of orange for hover */
-  color: white; /* Ensure text color remains white on hover */
+  color: var(--primary-color);
+}
+
+/* Dropdown styles */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  min-width: 200px;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav ul li:hover > ul {
+  display: flex;
+}
+
+nav ul li ul li a {
+  color: var(--text-color);
+  padding: 0.5rem 0;
+  display: block;
+  width: 100%;
+}
+
+nav ul li ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400; /* Normal weight */
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 400; /* Normal weight */
+}
+
+a:hover {
+  color: #E85A2A; /* Slightly darker orange */
 }
 
 /* Main content */
 main {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
+  margin: 2rem auto;
+  padding: 3rem;
   min-height: calc(100vh - 200px);
   animation: fadeIn 0.8s ease-in-out;
+  background-color: white;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-  background-color: var(--dark-bg);
-  color: white;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 2rem 0;
   text-align: center;
-  padding: 1.5rem 0;
   position: relative;
   width: 100%;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.95rem;
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -175,42 +249,15 @@ footer p {
   }
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  header {
-    padding: 1.5rem 0;
-  }
-  
-  header h1 {
-    font-size: 2.2rem;
-  }
-  
-  nav ul {
-    gap: 1rem;
-  }
-  
-  nav ul li a {
-    font-size: 1rem;
-    padding: 0.4rem 0.6rem;
-  }
-  
-  main {
-    padding: 2rem 1.5rem;
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-  }
-}
-
-/* Additional components */
+/* Card styling */
 .card {
   background-color: white;
   border-radius: 8px;
-  box-shadow: var(--shadow);
   padding: 2rem;
   margin-bottom: 2rem;
+  box-shadow: var(--shadow);
   transition: var(--transition);
+  border-left: 3px solid var(--primary-color);
 }
 
 .card:hover {
@@ -218,43 +265,96 @@ footer p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.btn {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: var(--transition);
-  border: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: var(--primary-color);
-  transform: translateY(-2px);
-  color: white;
-  text-decoration: none;
-}
-
 /* Section styling */
 section {
   margin-bottom: 3rem;
 }
 
-.section-title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 2rem;
+/* Responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  nav ul {
+    gap: 1.5rem;
+  }
+  
+  nav ul li ul {
+    position: static;
+    display: none;
+    width: 100%;
+  }
+  
+  main {
+    padding: 2rem 1.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 50px;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+/* Dark mode adjustments */
+body.dark-mode header {
+  background-color: var(--dark-secondary-color);
+}
+
+body.dark-mode main {
+  background-color: var(--dark-bg);
+  color: var(--dark-text-color);
+}
+
+body.dark-mode nav ul li a {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode nav ul li ul {
+  background-color: var(--dark-secondary-color);
+}
+
+body.dark-mode .card {
+  background-color: var(--dark-secondary-color);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: var(--dark-text-color);
+}
+
+body.dark-mode h1 {
+  color: var(--primary-color);
+}
+
+body.dark-mode a {
+  color: var(--secondary-color);
+}
+
+body.dark-mode a:hover {
+  color: var(--primary-color);
+}
+
+body.dark-mode #theme-toggle {
+  color: var(--secondary-color);
+}
+
+/* Custom font classes - add these to elements to use specific fonts */
+.font-elza {
+  font-family: "Elza", sans-serif, "Inter", sans-serif;
+}
+
+.font-recoleta {
+  font-family: "Recoleta", serif, "Georgia", serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
