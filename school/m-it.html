@@ -26,8 +26,25 @@
     </script>
     <main>
         <h1>Master of Information Technology</h1>
+
+        <section id="m-it-course-plan">
+            <button class="toggle-button" id="toggle-image">Course plan</button>
+            <img id="course-plan-img" src="images/m-it-course-plan.png" alt="Course plan" style="width: 80%; height: auto; display: none;">
+            <script>
+                document.getElementById('toggle-image').addEventListener('click', function() {
+                    const img = document.getElementById('course-plan-img');
+                    if (img.style.display === 'none') {
+                        img.style.display = 'block';
+                    } else {
+                        img.style.display = 'none';
+                    }
+                });
+            </script>
+        </section>
+
         <section id="m-it-projects">
-            <table style="width: 100%; border-collapse: collapse;">
+            <button class="toggle-button" id="toggle-projects">Projects</button>
+            <table id="projects-table" style="width: 100%; border-collapse: collapse; display: none;">
                 <thead>
                     <tr>
                         <th style="border: 1px solid #ddd; padding: 8px;">Project</th>
@@ -77,6 +94,16 @@
                     </tr>
                 </tbody>
             </table>
+            <script>
+                document.getElementById('toggle-projects').addEventListener('click', function() {
+                    const table = document.getElementById('projects-table');
+                    if (table.style.display === 'none') {
+                        table.style.display = 'table';
+                    } else {
+                        table.style.display = 'none';
+                    }
+                });
+            </script>
         </section>
     </main>
     <footer>

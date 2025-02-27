@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /* Base styles and variables */
 :root {
   /* Professional Color Palette */
@@ -23,9 +26,6 @@
   --dark-secondary-color: #2B2D42;
 }
 
-/* Importing Google Fonts - Professional combination */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); /* Regular Inter font */
-
 * {
   margin: 0;
   padding: 0;
@@ -33,12 +33,12 @@
 }
 
 body {
-  font-family: "Inter", sans-serif; /* Fallback to Inter */
+  font-family: "Lato", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--neutral-light);
   overflow-x: hidden;
-  font-weight: 400; /* Normal weight */
+  font-weight: 400;
 }
 
 body.dark-mode {
@@ -53,8 +53,8 @@ button, .btn {
   border: none;
   padding: 12px 24px;
   border-radius: 4px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400; /* Normal weight */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   font-size: 0.95rem;
   cursor: pointer;
   transition: var(--transition);
@@ -68,53 +68,95 @@ button:hover, .btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Theme Toggle Button */
-#theme-toggle {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  padding: 0;
-  background-color: transparent;
+/* Toggle Button Styles */
+.toggle-button {
+  background-color: var(--neutral-light); 
+  border: 2px solid var(--primary-color); 
+  cursor: pointer;
+  font-size: 1rem;
   color: var(--primary-color);
-  box-shadow: none;
-  margin-left: 15px;
-}
-
-#theme-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  transform: none;
-}
-
-/* Professional Header Styles */
-header {
-  background-color: var(--header-bg);
-  color: var(--text-color);
-  padding: 2rem 0;
-  box-shadow: var(--shadow);
-  position: relative;
+  padding: 10px 20px; 
+  border-radius: 25px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 500;
 }
 
-header h1 {
-  font-family: "Inter", sans-serif;
+.toggle-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.toggle-button.active {
+  background-color: #E85A2A; 
+  color: white;
+  border-color: #E85A2A;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Merriweather", serif;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+h1 {
   font-size: 2.8rem;
-  margin-bottom: 1rem;
   color: var(--primary-color);
-  font-weight: 600;
 }
 
-/* Navigation */
+h2 {
+  font-size: 2.2rem;
+  color: var(--text-color);
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+/* Typography */
+p {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 400; 
+}
+
+a:hover {
+  color: #E85A2A;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* Navigation Styles */
 nav {
-  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 nav ul {
@@ -136,14 +178,9 @@ nav ul li a {
   padding: 0.5rem 0;
   transition: var(--transition);
   font-family: "Inter", sans-serif;
-  position: relative;
 }
 
-nav ul li a:hover {
-  color: var(--primary-color);
-}
-
-/* Dropdown styles */
+/* Dropdown Styles */
 nav ul li ul {
   display: none;
   position: absolute;
@@ -165,54 +202,13 @@ nav ul li:hover > ul {
 
 nav ul li ul li a {
   color: var(--text-color);
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   display: block;
   width: 100%;
 }
 
 nav ul li ul li a:hover {
   color: var(--primary-color);
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif;
-  font-weight: 400; /* Normal weight */
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-}
-
-h1 {
-  font-size: 2.8rem;
-  color: var(--primary-color);
-}
-
-h2 {
-  font-size: 2.2rem;
-  color: var(--text-color);
-}
-
-h3 {
-  font-size: 1.8rem;
-  color: var(--text-color);
-}
-
-p {
-  margin-bottom: 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: var(--transition);
-  font-weight: 400; /* Normal weight */
-}
-
-a:hover {
-  color: #E85A2A; /* Slightly darker orange */
 }
 
 /* Main content */
@@ -297,64 +293,4 @@ section {
   h2 {
     font-size: 1.6rem;
   }
-}
-
-/* Dark mode adjustments */
-body.dark-mode header {
-  background-color: var(--dark-secondary-color);
-}
-
-body.dark-mode main {
-  background-color: var(--dark-bg);
-  color: var(--dark-text-color);
-}
-
-body.dark-mode nav ul li a {
-  color: var(--dark-text-color);
-}
-
-body.dark-mode nav ul li ul {
-  background-color: var(--dark-secondary-color);
-}
-
-body.dark-mode .card {
-  background-color: var(--dark-secondary-color);
-}
-
-body.dark-mode h1, 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4, 
-body.dark-mode h5, 
-body.dark-mode h6 {
-  color: var(--dark-text-color);
-}
-
-body.dark-mode h1 {
-  color: var(--primary-color);
-}
-
-body.dark-mode a {
-  color: var(--secondary-color);
-}
-
-body.dark-mode a:hover {
-  color: var(--primary-color);
-}
-
-body.dark-mode #theme-toggle {
-  color: var(--secondary-color);
-}
-
-/* Custom font classes - add these to elements to use specific fonts */
-.font-elza {
-  font-family: "Elza", sans-serif, "Inter", sans-serif;
-}
-
-.font-recoleta {
-  font-family: "Recoleta", serif, "Georgia", serif;
-}
-
-.font-inter {
-  font-family: "Inter", sans-serif;
 }
