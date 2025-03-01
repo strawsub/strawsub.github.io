@@ -180,37 +180,6 @@ nav ul li a {
   font-family: "Inter", sans-serif;
 }
 
-/* Dropdown Styles */
-nav ul li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  border-radius: 4px;
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  z-index: 100;
-  min-width: 200px;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-nav ul li:hover > ul {
-  display: flex;
-}
-
-nav ul li ul li a {
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  display: block;
-  width: 100%;
-}
-
-nav ul li ul li a:hover {
-  color: var(--primary-color);
-}
-
 /* Main content */
 main {
   max-width: 1200px;
