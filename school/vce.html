@@ -1,41 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="../">
-    <title>Victorian Certificate of Education</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Victorian Certificate of Education - Khue Nguyen</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Khue Nguyen</h1>
-        <div id="nav-placeholder"></div>
-    </header>
-    <script>
-        function loadNavigation() {
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-placeholder').innerHTML = data;
-                });
-        }
-        loadNavigation();
-    </script>
-    <main>
-        <h1>Victorian Certificate of Education</h1>
-        
-        <section id="vce-notion">
-            <a class="toggle-button" id="toggle-notion-site" href="https://qvce.notion.site/VCE-6be978d17921473aa17d69dba7d20dcb" target="_blank">Notion site</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Khue Nguyen</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../school.html" class="nav-link active">School</a></li>
+                <li><a href="../engineering.html" class="nav-link">Engineering</a></li>
+                <li><a href="../badminton.html" class="nav-link">Badminton</a></li>
+                <li><a href="../reading.html" class="nav-link">Reading</a></li>
+                <li><a href="../movies.html" class="nav-link">Movies & Dramas</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="interest-page">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> / <a href="../school.html">School</a> / <span>VCE</span>
+                </div>
+                <div class="page-hero">
+                    <div class="page-icon">🍼</div>
+                    <h1 class="page-title">Victorian Certificate of Education</h1>
+                    <p class="page-subtitle">McKinnon Secondary College</p>
+                </div>
+            </div>
         </section>
 
-    </main>
-    <footer>
-        <p>&copy; 2025 Thuy Khue Nguyen</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+        <!-- Content Sections -->
+        <section class="content-section">
+            <div class="container">
+                <!-- Introduction -->
+                <div class="content-block">
+                    <h2>About My VCE</h2>
+                    <p>
+                        I moved to Australia in Year 9 as an international student. McKinnon Secondary College was a relatively competitive non-selective government school and studied the entire six subjects allocated.
+                    </p>
+                    <p>
+                        A quick heads-up:
 
+                        Most of the answers and explanations here have been written by me, but occasionally you might find material that isn’t original. If you come across any potential copyright issues, please don’t hesitate to contact me.
+
+                        Also, not everything on this site is guaranteed to be correct — if it were, I’d have scored a perfect raw 50 in all four subjects!
+
+                        One more thing: the content is based on the 2020 coronavirus-era study design, which means some subjects might be missing one or two areas of study compared to current outlines.
+                    </p>
+                </div>
+
+                <!-- Subjects -->
+                <div class="content-block">
+                <h2>Subjects</h2>
+                <div class="skills-grid">
+                    <a class="skill-item" href="vce/methods.html">
+                        <div class="skill-icon">♾️</div>
+                        <h3>Mathematical Methods</h3>
+                        <p>Functions, algebra, calculus, and probability & statistics</p>
+                    </a>
+                    <a class="skill-item" href="vce/spesh.html">
+                        <div class="skill-icon">💀</div>
+                        <h3>Specialist Math</h3>
+                        <p>Mathematical methods with complex numbers, differential equations, kinematics, vector.</p>
+                    </a>
+                    <a class="skill-item" href="https://qvce.notion.site/Economics-c2b0f3bdb40847af885163bb233ffdc0">
+                        <div class="skill-icon">🏔️</div>
+                        <h3>Economics</h3>
+                        <p>Demand and supply, micro and macro.</p>
+                    </a>
+                    <a class="skill-item" href="https://qvce.notion.site/Accounting-c261de14d33c41d880d010cc3d6da18e">
+                        <div class="skill-icon">🧮</div>
+                        <h3>Accounting</h3>
+                        <p>Debits and credits, some financial decision-making.</p>
+                    </a>
+                    <a class="skill-item" href="https://qvce.notion.site/EAL-54636bc1b813474288eb926daf31e113">
+                        <div class="skill-icon">☕️</div>
+                        <h3>English as an Additional Language</h3>
+                        <p>Test response, comparative text response, language analysis and listening.</p>
+                    </a>
+                    <a class="skill-item" href="vce/viet.html">
+                        <div class="skill-icon">🇻🇳</div>
+                        <h3>Vietnamese as First Language</h3>
+                        <p>Little learnt.</p>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Khue Nguyen.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
 </html>

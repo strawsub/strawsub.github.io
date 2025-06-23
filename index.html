@@ -7,33 +7,127 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Khue Nguyen</h1>
-        <div id="nav-placeholder"></div> 
-    </header>
-    <script>
-        function loadNavigation() {
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-placeholder').innerHTML = data;
-                });
-        }
-        loadNavigation();
-    </script>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Khue Nguyen</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="school.html" class="nav-link">School</a></li>
+                <li><a href="engineering.html" class="nav-link">Engineering</a></li>
+                <li><a href="badminton.html" class="nav-link">Badminton</a></li>
+                <li><a href="reading.html" class="nav-link">Reading</a></li>
+                <li><a href="movies.html" class="nav-link">Movies & Dramas</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-       <section id="about-me" style="display: flex; align-items: center; margin: 2rem 0;">
-            <img src="khue-photo.png" alt="Khue's Photo" style="width: 200px; height: auto; margin-right: 2rem; border-radius: 10px;">
-            <div>
-                <h2>Welcome to my little corner of the Internet...</h2>
-                <p>My name is Khue. I was born in Ho Chi Minh city, Vietnam and moved to Melbourne, Australia in high school.</p>
-                <p>My interests lie in engineering things, badminton, reading books and watching dramas/movies.</p>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-photo">
+                    <img src="images/khue-portrait.jpg" alt="Khue Nguyen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="profile-placeholder">KN</div>
+                </div>
+                <h1 class="hero-title">Khue Nguyen</h1>
+                <p class="hero-subtitle">Welcome to my little corner of the Internet</p>
+                <div class="hero-description">
+                    <p>
+                        My name is Khue. I was born in Ho Chi Minh City, Vietnam and moved to Melbourne, Australia during high school. 
+                        I'm passionate about creating things, staying active, and exploring stories through books and films.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Overview -->
+        <section id="interests" class="section">
+            <div class="container">
+                <h2 class="section-title">My Interests</h2>
+                <p class="section-subtitle">Areas of my life that I spend a lot of time in</p>
+                
+                <div class="interests-grid">
+                    <a href="school.html" class="interest-card">
+                        <div class="interest-icon">🏫</div>
+                        <h3>School</h3>
+                        <p>A collection of all the knowledge gained (and lost)</p>
+                        <span class="explore-link">Explore →</span>
+                    </a>
+
+                    <a href="engineering.html" class="interest-card">
+                        <div class="interest-icon">🔧</div>
+                        <h3>Engineering</h3>
+                        <p>Building and creating solutions</p>
+                        <span class="explore-link">Explore →</span>
+                    </a>
+                    
+                    <a href="badminton.html" class="interest-card">
+                        <div class="interest-icon">🏸</div>
+                        <h3>Badminton</h3>
+                        <p>Staying active and entertained</p>
+                        <span class="explore-link">Explore →</span>
+                    </a>
+                    
+                    <a href="reading.html" class="interest-card">
+                        <div class="interest-icon">📚</div>
+                        <h3>Reading</h3>
+                        <p>Exploring new thoughts and ideas</p>
+                        <span class="explore-link">Explore →</span>
+                    </a>
+                    
+                    <a href="movies.html" class="interest-card">
+                        <div class="interest-icon">🎬</div>
+                        <h3>Movies & Dramas</h3>
+                        <p>Escaping reality</p>
+                        <span class="explore-link">Explore →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <p>Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:nkhue29@gmail.com" class="contact-link">
+                            <span class="contact-icon">📧</span>
+                            Email
+                        </a>
+                        <a href="https://linkedin.com/in/thuykhuenguyen" class="contact-link">
+                            <span class="contact-icon">💼</span>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/strawsub" class="contact-link">
+                            <span class="contact-icon">💻</span>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Thuy Khue Nguyen</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Khue Nguyen.</p>
+        </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/main.js"></script>
+
 </body>
 </html>

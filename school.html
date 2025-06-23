@@ -1,84 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School</title>
+    <title>School - Khue Nguyen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Khue Nguyen</h1>
-        <div id="nav-placeholder"></div>
-    </header>
-    <script>
-        function loadNavigation() {
-            fetch('navigation.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('nav-placeholder').innerHTML = data;
-                });
-        }
-        loadNavigation();
-    </script>
-
-    <main>
-        <section id="m-it">
-            <h2><a href="school/m-it.html">Master of Information Technology</a></h2>
-            <h3>The University of Melbourne</h3>
-            <p><strong>Feb 2023 - Dec 2025</strong></p>
-
-            <p>
-                The Master of Information Technology at The University of Melbourne was a natural
-                choice for its:
-            </p>
-
-            <ul>
-                <li><strong>Ease of entry:</strong> The only prerequisites were my single coding subject and a Bachelor
-                    degree.</li>
-                <li><strong>Breadth of specialisations:</strong> I wasn’t certain on the area I would like to focus on.
-                    Artificial intelligence was the trend, but cyber security was the security—yet all I wanted was to
-                    write software.</li>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Khue Nguyen</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="school.html" class="nav-link active">School</a></li>
+                <li><a href="engineering.html" class="nav-link">Engineering</a></li>
+                <li><a href="badminton.html" class="nav-link">Badminton</a></li>
+                <li><a href="reading.html" class="nav-link">Reading</a></li>
+                <li><a href="movies.html" class="nav-link">Movies & Dramas</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-            <p>
-                My initial choice of specialisation was the vanilla Computing. However, due to the lack of interesting
-                electives, I eventually relocated to Artificial Intelligence. Both share more similarities than differences in
-                terms of their course structure.
-            </p>
+    <!-- Main Content -->
+    <main class="interest-page">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>School</span>
+                </div>
+                <div class="page-hero">
+                    <div class="page-icon">🏫</div>
+                    <h1 class="page-title">School</h1>
+                    <p class="page-subtitle">A collection of knowledge gained (and lost)</p>
+                </div>
+            </div>
         </section>
 
-        <section id="b-com">
-            <h2><a href="school/b-com.html">Bachelor of Commerce</a></h2>
-            <h3>The University of Melbourne</h3>
-            <p><strong>Feb 2021 - Dec 2023</strong></p>
-
-            <p>
-                I chose Commerce because I performed well in Commerce subjects during high school. I didn't have a strong passion for anything at the time. The University of Melbourne provided me with the most generous scholarship, and was the highest ranked university in Melbourne.
-            </p>
-
-            <p>
-                I majored in <strong>Accounting & Finance</strong>. Accounting promised the best job security. Finance was quite straightforward for a black-and-white person like myself. 
-            </p>
+         <!-- Content Sections -->
+        <section class="content-section">
+            <div class="container">
+                <!-- Introduction -->
+                <div class="content-block">
+                    <h2>My Education Journey</h2>
+                    <p>
+                        Rooted from my cultural and family background, education has always been the forefront of my personal development.
+                    </p>
+                    <p>
+                        I started documenting my educational journey, by collecting study resources that I produce, when I started high school in Australia.
+                    </p>
+                </div>
+            
+                <!-- Courses -->
+                <div class="content-block">
+                    <h2>Courses</h2>
+                    <div class="learning-list">
+                        <a class="learning-item" href="school/mit.html">
+                            <div class="learning-icon">🚀</div>
+                            <div class="learning-content">
+                                <h3>Master of Information Technology</h3>
+                                <h4>The University of Melbourne. Major: Artificial Intelligence.</h4>
+                                <p>I learnt the foundation of computers and software, and their applications in AI.</p>
+                            </div>
+                        </a>
+                        <a class="learning-item" href="school/bcom.html">
+                            <div class="learning-icon">☁️</div>
+                            <div class="learning-content">
+                                <h3>Bachelor of Commerce</h3>
+                                <h4>The University of Melbourne. Majors: Accounting & Finance.</h4>
+                                <p>I learnt the administrative processes of a business.</p>
+                            </div>
+                        </a>
+                        <a class="learning-item" href="school/vce.html">
+                            <div class="learning-icon">🍼</div>
+                            <div class="learning-content">
+                                <h3>Victorian Certificate of Education</h3>
+                                <h4>McKinnon Secondary College.</h4>
+                                <p>I learnt how to study effectively.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="vce">
-            <h2><a href="school/vce.html">Victorian Certificate of Education</a></h2>
-            <h3>McKinnon Secondary College</h3>
-            <p><strong>Oct 2016 - Nov 2020</strong></p>
-
-            <p>
-                My dad selected McKinnon Seconday College for its high performance as a public non-selective school. It was the correct choice as I was surrounded by thoughtful, motivated and responsible peers.
-            </p>
-        </section>
 
     </main>
-    <footer>
-        <p>&copy; 2025 Thuy Khue Nguyen</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Khue Nguyen.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+
+</body>
 </html>
