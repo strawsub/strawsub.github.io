@@ -706,7 +706,8 @@ ul ul, ol ol, ul ol, ol ul {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        /* box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05); */
+        box-shadow: none;
         padding: 2rem 0;
         gap: 1rem;
     }
