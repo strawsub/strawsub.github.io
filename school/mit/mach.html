@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Machine Learning - Khue Nguyen</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html">Khue Nguyen</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="../../school.html" class="nav-link active">School</a></li>
+                <li><a href="../../engineering.html" class="nav-link">Engineering</a></li>
+                <li><a href="../../badminton.html" class="nav-link">Badminton</a></li>
+                <li><a href="../../reading.html" class="nav-link">Reading</a></li>
+                <li><a href="../../movies.html" class="nav-link">Movies & Dramas</a></li>
+                <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="interest-page">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> / <a href="../school.html">School</a> / <span>M-IT</span>
+                </div>
+                <div class="page-hero">
+                    <div class="page-icon">🖨️</div>
+                    <h1 class="page-title">Introduction to Machine Learning</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <section class="content-section">
+            <div class="container">
+                <!-- Subject Details -->
+                <div class="content-block">
+                    <h2>Subject Details</h2>
+                    <ul>
+                        <li><strong>Subject Name and Code:</strong> Models of Computation COMP30026</li>
+                        <li><strong>Staff:</strong> Hasti Samadi, Yulia Otmakhova, Mojgan Kouhounestani, Behzad Moradi</li>
+                        <li><strong>Period:</strong> 2024 Semester 2</li>
+                        <li><strong>Result:</strong> 88</li>
+                    </ul>
+                </div>
+
+
+                <!-- Assessment -->
+                <div class="content-block">
+                    <h2>Assessment</h2>
+                    <details>
+                        <summary><strong>Netflix Data Analysis</strong> (20%)</summary>
+                        <p>
+                            Using dataset adapted from the Netflix website, perform simple data analysis tasks and apply Naive Bayes and Decision Tree.
+                        </p>
+                        <p>
+                            Pre-process data, analyse relationships between different attributes, training and tuning decision tree, feature selection and hyperparameters tuning, evaluating models.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary><strong>Predicting Supreme Court Rulings</strong> (30%)</summary>
+                        <p>
+                            Develop multiple models to predict Supreme Court decision based on the provided dataset. Then, explore a research question of choice.
+                        </p>
+                        <p>
+                            My research question: How to reduce the number of training instances while maintaining or improving model performance?
+                        </p>
+                        <a href="https://github.com/strawsub/Predicting-Supreme-Court-Rulings">Code and final report on GitHub</a>
+                    </details>
+                </div>
+
+                <!-- Areas of Study -->
+                <div class="content-block">
+                <section>
+                <h2>Areas of Study</h2>
+
+                <details>
+                    <summary>Introduction to Machine Learning</summary>
+                    <ul>
+                    <li>Methods of learning: supervised, semi-supervised, unsupervised</li>
+                    <li>Concepts learning: classification, regression, clustering</li>
+                    <li>Attributes: feature vectors & data types, discrete data type, continuous data type, converting between data types, scaling, normalization</li>
+                    <li>Real-world challenges: missing values, disguised missing data, simple imputation, inaccurate values</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>k-Nearest Neighbour</strong></summary>
+                    <ul>
+                    <li>KNN algorithm</li>
+                    <li>KNN target concepts: classification & regression</li>
+                    <li>Lazy vs eager learning</li>
+                    <li>KNN problem of representing data point</li>
+                    <li>KNN problem of distance: nominal - Hamming, Jaccard, ordinal - normalised ranks, numeric: Manhattan, Euclidean, cosine</li>
+                    <li>KNN problem of disagreeing neighbours: majority voting. weighted KNN using inverse linear distance</li>
+                    <li>KNN problem of selecting K: small K vs large K, breaking ties</li>
+                    </ul>
+                </details>
+
+                <details>
+                <summary>Probability & Distributions</summary>
+                <ul>
+                    <li>Probability basics: joint, conditional, independence</li>
+                    <li>Bayes rule, marginalisation</li>
+                    <li>Distributions: normal, binomial, multinomial, categorical</li>
+                    <li>Parameters in model: MLE vs MAP, theta estimation</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Decision Trees</summary>
+                <ul>
+                    <li>Baseline models: Zero-R, One-R, two decision stumps</li>
+                    <li>Entropy & information gain</li>
+                    <li>ID3 algorithm: optimal tree, gain ratio, stopping criteria (threshold, pruning)</li>
+                    <li>Tree types: numeric features, regression trees</li>
+                    <li>Decision trees pros & cons</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Model Evaluation & Tuning</summary>
+                <ul>
+                    <li>Evaluation strategies, pros & cons: holdout, cross-validation, stratification</li>
+                    <li>Tuning: depth of decision tree, validation data, splitting dataset</li>
+                    <li>Classification metrics: accuracy, precision, recall, F1, confusion matrix</li>
+                    <li>Regression metrics: MSE, RMSE, MAE</li>
+                    <li>Averaging techniques: macro, micro, weighted</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Feature Selection & Text Processing</summary>
+                <ul>
+                    <li>Wrapper methods: greedy, backward elimination</li>
+                    <li>Filter methods: pointwise mutual information, mutual information</li>
+                    <li>Strategies for nominal vs continuous attributes</li>
+                    <li>Text preprocessing: tokenisation, cleaning, case folding, vectorization, stop words, stemming</li>
+                    <li>Feature extraction: Bag of Words, TF-IDF</li>
+                    <li>Common issue in text preprocessing: multi-class problems, data leakage</li>
+                    <li></li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Iterative Optimisation & Logistic Regression</summary>
+                <ul>
+                    <li>Optimisation: MLE, exact optimisation, gradient descent</li>
+                    <li>Logistic regression: derivation, odds, logit, softmax</li>
+                    <li>Multiclass classification: one-vs-all, softmax/li>li>
+                    <li>Discriminative vs generative</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Naive Bayes</summary>
+                <ul>
+                    <li>Bayes' rule & Naive Bayes</li>
+                    <li>Smoothing: epsilon, Laplace, implications</li>
+                    <li>Implementations: categorical, Gaussian, Bernoulli</li>
+                    <li>Log transformation & continuous feature smoothing</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Clustering & Unsupervised Learning</summary>
+                <ul>
+                    <li>Types: K-means, hierarchical (agglomerative/divisive)</li>
+                    <li>Distance/linkage methods</li>
+                    <li>Evaluation: WCSS, BCSS, CH index, homogeneity, completeness</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Overfitting, Underfitting, Bias & Variance</summary>
+                <ul>
+                    <li>Generalisation error: bias, variance, noise</li>
+                    <li>Learning curves & model complexity</li>
+                    <li>Diagnosing & remedying high bias/variance</li>
+                    <li>Controlling bias/variance in evaluation</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Semi-supervised & Active Learning</summary>
+                <ul>
+                    <li>Semi-supervised learning & active learning</li>
+                    <li>Active learning: choosing instances, practicalities</li>
+                    <li>Data augmentation: problem-specific strategies</li>
+                    <li>Pre-training, self-supervised learning in NLP</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Ensemble Methods</summary>
+                <ul>
+                    <li>Bagging, boosting, stacking</li>
+                    <li>Random forest: hyperparameters & interpretation</li>
+                    <li>AdaBoost: core idea & parameters</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Neural Networks & Perceptrons</summary>
+                <ul>
+                    <li>Perceptron: definition, algorithm, convergence</li>
+                    <li>Multilayer perceptron: structure & terminology</li>
+                    <li>Feedforward prediction, boolean functions</li>
+                    <li>Activation, output, loss functions</li>
+                    <li>Backpropagation & generalised delta rule</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Fairness & ML Ethics</summary>
+                <ul>
+                    <li>Types of bias: human, data, evaluation</li>
+                    <li>Fairness metrics: group, predictive parity, individual fairness</li>
+                    <li>ML pipeline adjustments: pre-, in-, and post-processing</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Generative Models</summary>
+                <ul>
+                    <li>Descriptive vs generative</li>
+                    <li>Autoencoders: structure, bottlenecks, pros/cons</li>
+                    <li>GANs: generator & discriminator, training, evaluation</li>
+                </ul>
+                </details>
+
+                <details>
+                <summary>Anomaly Detection</summary>
+                <ul>
+                    <li>Types: global, contextual, collective</li>
+                    <li>Paradigms: supervised, semi-supervised, unsupervised</li>
+                    <li>Approaches: statistical, proximity, density, cluster-based</li>
+                    <li>Metrics: Mahalanobis distance, likelihood, density score</li>
+                </ul>
+                </details>
+
+                </div>
+
+                <!-- Reflection -->
+                <div class="content-block">
+                    <h2>Reflection</h2>
+                    <p>
+                        A very content-heavy subject that glosses over many important machine learning topics. My feedback is that the subject dives deeper in the maths and technical details behind the key models, and omit the more advanced topics. The exam is a solid challenge that covers the entire course comprehensively. The lectures can be dry at times.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Khue Nguyen.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
